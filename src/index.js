@@ -1,5 +1,5 @@
-const app = require("./app");
-const { makeConnection } = require("./database");
+import app from "./app";
+import { makeConnection } from "./database";
 
 function init() {
   makeConnection();

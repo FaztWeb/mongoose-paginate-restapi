@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "node src/index.js",
-    "dev": "nodemon src/index.js",
-    "seed": "node seed/seed-products.js"
+    "dev": "nodemon src/index.js --exec babel-node",
+    "seed": "babel-node seed/seed-products.js"
   },
   "keywords": [],
   "author": "",
@@ -18,6 +18,9 @@
     "mongoose-paginate-v2": "^1.3.9"
   },
   "devDependencies": {
+    "@babel/core": "^7.10.5",
+    "@babel/node": "^7.10.5",
+    "@babel/preset-env": "^7.10.4",
     "docdash": "^1.2.0",
     "jsdoc": "^3.6.4",
     "nodemon": "^2.0.4"

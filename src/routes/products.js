@@ -1,7 +1,7 @@
-const { Router } = require("express");
+import { Router } from "express";
 const router = Router();
 
-const Product = require("../models/Product");
+import Product from '../models/Product'
 
 router.get("/products", async (req, res) => {
   // options for the pagination
@@ -45,4 +45,4 @@ router.delete("/products/:id", async (req, res) => {
   res.json(productRemoved);
 });
 
-module.exports = router;
+export default router;

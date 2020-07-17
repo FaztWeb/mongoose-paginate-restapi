@@ -13,5 +13,5 @@ docker-compose up
 create 100 projects objects inside mongodb
 
 ```
-docker exec -it api node seed/seed-products.js
+docker exec -it api npm run seed
 ```

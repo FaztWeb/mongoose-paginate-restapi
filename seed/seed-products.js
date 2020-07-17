@@ -1,6 +1,6 @@
-const faker = require("faker");
-const { makeConnection } = require("../src/database");
-const Product = require("../src/models/Product");
+import faker from "faker";
+import { makeConnection } from "../src/database";
+import Product from "../src/models/Product";
 
 const createFakeProduct = () => ({
   name: faker.commerce.productName(),
