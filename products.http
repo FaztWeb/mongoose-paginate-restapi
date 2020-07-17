@@ -27,3 +27,6 @@ Content-Type: application/json
 {
   "name": "Laptop HP"
 }
+
+### pagination of products
+GET http://localhost:3000/products?limit=10&page=10

@@ -3,15 +3,21 @@ const router = Router();
 
 const Product = require("../models/Product");
 
+router.get("/products", async (req, res) => {
+  // options for the pagination
+  const options = req.query;
+
+  // find products and paginate
+  const products = await Product.paginate({}, options);
+
+  // respond to the user
+  res.json(products);
+});
+
 router.post("/products", async (req, res) => {
   const newProduct = new Product(req.body);
   await newProduct.save();
   res.status(201).json(newProduct);
-});
-
-router.get("/products", async (req, res) => {
-  const products = await Product.find();
-  res.json(products);
 });
 
 router.get("/products/:id", async (req, res) => {
