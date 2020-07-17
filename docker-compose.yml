@@ -1,0 +1,23 @@
+version: '3.8'
+
+services: 
+  web: 
+    container_name: api
+    image: node:14
+    build: .
+    command: npm run dev
+    ports: 
+      - "3000:3000"
+    depends_on: 
+      - database
+    volumes: 
+      - .:/usr/app
+    environment: 
+      - MONGODB_URI=mongodb://mymongo/mydatabase
+  database:
+    container_name: mymongo
+    image: mongo
+    ports: 
+      - "27017:27017"
+    logging: 
+      driver: none
