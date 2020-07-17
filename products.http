@@ -1,0 +1,29 @@
+### Get all Product
+GET http://localhost:3000/products
+
+
+### Create a new Product
+POST http://localhost:3000/products
+Content-Type: application/json
+
+{
+  "name": "laptop",
+  "description": "a gaming laptop",
+  "price": 30
+}
+
+
+### Get a single product
+GET http://localhost:3000/products/5f1102a677dfcc233ae9d971
+
+### Delete a single Product
+DELETE http://localhost:3000/products/5f1102a677dfcc233ae9d971
+
+
+### Update a Product
+PUT http://localhost:3000/products/5f1102c3a2391623ab1d99fe
+Content-Type: application/json
+
+{
+  "name": "Laptop HP"
+}
